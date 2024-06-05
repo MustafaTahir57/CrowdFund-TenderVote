@@ -1,0 +1,286 @@
+export const tenderAddress = "0xC36d8E9908a0bF4E13d8E40Aa518D4Ed806dF763";
+export const tenderAbi = [
+  {
+    inputs: [
+      { internalType: "address", name: "sabz", type: "address" },
+      { internalType: "address", name: "tOwner", type: "address" },
+    ],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    inputs: [{ internalType: "address", name: "owner", type: "address" }],
+    name: "OwnableInvalidOwner",
+    type: "error",
+  },
+  {
+    inputs: [{ internalType: "address", name: "account", type: "address" }],
+    name: "OwnableUnauthorizedAccount",
+    type: "error",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipTransferred",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, internalType: "uint256", name: "tId", type: "uint256" },
+      { indexed: false, internalType: "uint256", name: "pId", type: "uint256" },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "bidder",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "enum TenderContract.PStatus",
+        name: "sts",
+        type: "uint8",
+      },
+    ],
+    name: "ProposalSubmitted",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, internalType: "uint256", name: "id", type: "uint256" },
+      { indexed: false, internalType: "string", name: "title", type: "string" },
+      {
+        indexed: false,
+        internalType: "enum TenderContract.TStatus",
+        name: "status",
+        type: "uint8",
+      },
+    ],
+    name: "TenderClosed",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, internalType: "uint256", name: "", type: "uint256" },
+    ],
+    name: "TenderOpened",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: false, internalType: "uint256", name: "id", type: "uint256" },
+      { indexed: false, internalType: "string", name: "title", type: "string" },
+      {
+        indexed: false,
+        internalType: "enum TenderContract.TStatus",
+        name: "sts",
+        type: "uint8",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "deadline",
+        type: "uint256",
+      },
+    ],
+    name: "TenderOpenning",
+    type: "event",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tenderId", type: "uint256" }],
+    name: "closeTender",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tenderID", type: "uint256" }],
+    name: "getProposalsCount",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tenderId", type: "uint256" }],
+    name: "getTProposals",
+    outputs: [
+      {
+        components: [
+          { internalType: "address", name: "bidder", type: "address" },
+          { internalType: "uint256", name: "tenderID", type: "uint256" },
+          { internalType: "uint256", name: "proposalId", type: "uint256" },
+          {
+            internalType: "string",
+            name: "proposalDescription",
+            type: "string",
+          },
+          {
+            internalType: "enum TenderContract.PStatus",
+            name: "proposalStatus",
+            type: "uint8",
+          },
+          { internalType: "uint256", name: "votes", type: "uint256" },
+        ],
+        internalType: "struct TenderContract.Proposal[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "tid", type: "uint256" }],
+    name: "getTenderDeadline",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tid", type: "uint256" }],
+    name: "getTenderStatus",
+    outputs: [
+      { internalType: "enum TenderContract.TStatus", name: "", type: "uint8" },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getTotalProposalsCount",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getTotalTenderCount",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "string", name: "_tenderTitleHash", type: "string" },
+      {
+        internalType: "string",
+        name: "_tenderDescriptionHash",
+        type: "string",
+      },
+      { internalType: "uint256", name: "_tenderDeadline", type: "uint256" },
+    ],
+    name: "openTender",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "_tenderId", type: "uint256" }],
+    name: "openTender",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "uint256", name: "_tenderId", type: "uint256" },
+      { internalType: "string", name: "_descriptionHash", type: "string" },
+    ],
+    name: "submitProposal",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "uint256", name: "", type: "uint256" },
+      { internalType: "uint256", name: "", type: "uint256" },
+    ],
+    name: "tProposals",
+    outputs: [
+      { internalType: "address", name: "bidder", type: "address" },
+      { internalType: "uint256", name: "tenderID", type: "uint256" },
+      { internalType: "uint256", name: "proposalId", type: "uint256" },
+      { internalType: "string", name: "proposalDescription", type: "string" },
+      {
+        internalType: "enum TenderContract.PStatus",
+        name: "proposalStatus",
+        type: "uint8",
+      },
+      { internalType: "uint256", name: "votes", type: "uint256" },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "tenders",
+    outputs: [
+      { internalType: "address", name: "owner", type: "address" },
+      { internalType: "uint256", name: "tenderId", type: "uint256" },
+      { internalType: "string", name: "tenderTitle", type: "string" },
+      { internalType: "string", name: "tenderDescription", type: "string" },
+      { internalType: "uint256", name: "tenderStartSate", type: "uint256" },
+      { internalType: "uint256", name: "tenderDeadline", type: "uint256" },
+      {
+        internalType: "enum TenderContract.TStatus",
+        name: "tenderStatus",
+        type: "uint8",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "newOwner", type: "address" }],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "uint256", name: "_tenderId", type: "uint256" },
+      { internalType: "uint256", name: "_proposalId", type: "uint256" },
+      {
+        internalType: "enum TenderContract.PStatus",
+        name: "_newStatus",
+        type: "uint8",
+      },
+    ],
+    name: "updateProposalStatus",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+];

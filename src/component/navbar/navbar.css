@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.log-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+.Tender-h2{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+.log-text:hover {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.buy-text {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.buy-text:hover {
+  color: #090979;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.btn-connect {
+  background-color: #090979;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.btn-connect:hover {
+  background-color: #090979;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.title-h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.Funding-p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.box-width {
+  background-color: #192734;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 32.23%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.mint-span {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.box-width-down {
+  background-color: #192734;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 46%;
+  padding: 20px !important;
+  height: 230px;
+  margin-bottom: 20px;
+}
+
+.box-width-min-down {
+  background-color: #192734;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 46%;
+  padding: 20px !important;
+  height: 340px;
+  margin-bottom: 20px;
+}
+
+.mint-h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-clear-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-group {
+  background-color: #354c61;
+  border: #354c61;
+  color: #fff;
+  padding: 5px 5px;
+}
+
+.input-group:focus {
+  background-color: #354c61;
+  border: #354c61;
+  color: #fff;
+  border: transparent !important;
+  outline: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+}
+
+.input-group::placeholder {
+  color: #999999;
+}
+
+.error-text {
+  font-size: 13px;
+  color: red;
+}
+
+.input-group::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.th--color{
+  background-color: #081724 !important;
+  color: #fff !important;
+  border: 1px solid  #1d2b38;
+}
+.th--color-tr{
+  background-color: #192734 !important;
+  color: #fff !important;
+  border: 1px solid  #223445;
+}
+.tile-span{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+.tile-span-one{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.Tendar--h4{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.custom-select {
+  background: #354c61 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
+}
+@media(max-width:768px) {
+  .box-width {
+    background-color: #192734;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .box-width-down {
+    background-color: #192734;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 95%;
+    padding: 20px !important;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .box-width-min-down {
+    background-color: #192734;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 95%;
+    padding: 20px !important;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .title-h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Titillium Web', sans-serif;
+  }
+}
+
+
+/* loading */
+.load-wrapp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8d8d857;
+}
+
+.load-wrapp:last-child {
+  margin-right: 0;
+}
+
+.spinner {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #4b9cdb;
+}
+
+.bubble-2 {
+  top: auto;
+  bottom: 0;
+}
+
+.load-9 .spinner {
+  animation: loadingI 2s linear infinite;
+}
+
+.load-9 .bubble-1,
+.load-9 .bubble-2 {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.load-9 .bubble-2 {
+  animation-delay: -1s;
+}
+
+@keyframes loadingI {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+/* pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li {
+  margin-right: 5px;
+}
+
+.pagination a {
+  color: #b6209f;
+  /* #f4f4f4; */
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #416b92;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #416b92;
+  color: #fff;
+}
+
+.pagination .active a {
+  background-color: #416b92;
+  color: #fff;
+  cursor: default;
+}
